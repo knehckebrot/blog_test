@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  background-color: white;
+}
+nav {
+  width: 100%;
+  background-color: #FDDB02;
+  padding: 15px;
+}
+.head {
+  list-style-position: outside;
+  list-style-type: none;
+  text-align: center;
+  font-family: Helvetica;
+}
+li {
+  width: 150px;
+  margin: 10px auto;
+  padding: 3px 0;
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  display: inline-block;
+}
+li:hover {
+  color: white;
+  background-color: #1b7e20;
+  border-radius: 5px;
+  cursor: default;
+}
+.title1 {
+  width: 80%;
+  margin: 0 auto 0;
+  font-size: 35px;
+  font-family: Helvetica;
+  font-style: italic;
+  font-weight: bold;
+  color: #1b7e20;
+}
+.title2 {
+  width: 80%;
+  margin: 0 auto 0;
+  font-size: 42px;
+  font-family: Helvetica;
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: 5px;
+  color: #FDDB02;
+
+}
+.body {
+
+}
+.bg {
+  width: 60%;
+  margin: 0 auto;
+}
+.box {
+  width: 60%;
+  max-width: 700px;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: white;
+}
+.text {
+  width: 80%;
+  margin: 0 auto;
+  padding: 2px 0 2px;
+  text-align: justify;
+  color: black;
+  font-family: Helvetica;
+  font-size: 22px;
+}
+.pipe {
+  width: 100%;
+  height: 2px;
+  margin: 20px 0;
+  background-color: #313535;
+  float: none;
+}
+.lpipe {
+  width: 100%;
+  height: 2px;
+  margin: 0 0 0;
+  background-color: #313535;
+  float: none;
+}
+.pic img {
+  justify-content: space-around;
+  width: 95%;
+  border-radius: 5px;
+  border-color: #FDDB02;
+  border-width: 2px;
+  border-style: solid;
+  text-align: center;
+}
+.pic {
+}
+#container-1 {
+  width: 80%;
+  margin: 10px auto;
+  display: flex;
+}
+#mitgliederh1 {
+  margin-top: 30px;
+}

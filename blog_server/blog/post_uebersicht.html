@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<script>
+  function loadPostCount() {
+    console.log("loadPostData() is am worken");
+
+     fetch("http://localhost:3003/loadPostCount", {
+        method: 'GET',
+         })
+        .then(response => response.json())
+        .then(response => {
+
+          console.log('success(loadPostCount): ', response);
+        });
+
+  }
+  function loadPostData() {
+    console.log("loadPostData() is am worken");
+
+     fetch("http://localhost:3003/loadPostData", {
+        method: 'GET',
+         })
+        .then(response => response.json())
+        .then(response => {
+
+          console.log('success(loadPostData): ', response);
+
+          var element = document.getElementById("bg");
+
+          for(i = 0; i <= response.length; i++){
+            var p = document.createElement("p");
+            var node = document.createTextNode(response[i].title);
+            p.appendChild(node);
+            p.classList.add('pipapo');
+            element.appendChild(p);
+
+          }
+        });
+      }
+</script>
+    <title>Testseite</title>
+    <link href="./style.css" type="text/css" rel="stylesheet"
+  </head>
+  <body onload="loadPostData();">
+    <nav>
+      <ul class="head">
+        <a href="db.html"><li>blog</li></a>
+        <a href="post_uebersicht.html"><li>posts</li></a>
+        <a><li>qualität</li></a>
+        <a><li>lieferservice</li></a>
+        <a><li>kontakt</li></a>
+      </ul>
+    </nav>
+    <div class="lpipe">
+    </div>
+    <div class="body" id="body1">
+      <div id="bg" class="bg">
+        <p id="test">sdawdsa</p>
+      </div>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>begrueßung</title>
+  </head>
+  <body>
+    <script>
+      function begruesung(){
+        let date = new Date();
+        let hrs = date.getHours();
+        console.log(hrs);
+        let str;
+        if(hrs < 10) {
+          str = 'Guten Morgen!';
+        }
+        else if(hrs < 12) {
+          str = 'Moin Moin, gleich ist Mittag!';
+        }
+        else if(hrs < 13) {
+          str = 'Mahlzeit'
+        }
+        else if(hrs < 16) {
+          str = 'Tag auch, nicht mehr lange bis zum Feierabend!';
+        }
+        document.write(str);
+      }
+    </script>
+    <input type="button" name="Hallo" value="Hallo!" onClick="begruesung();"
+
+  </body>
+</html>

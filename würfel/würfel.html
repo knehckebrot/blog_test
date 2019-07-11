@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>wuerfelblabla</title>
+    <script>
+      function wuerfel() {
+          var wuerfelgr = document.getElementById('wuerfelgr').value;
+          var ausgabe = Math.floor(Math.random() * wuerfelgr);
+          while(ausgabe == 0){
+            var ausgabe = Math.floor(Math.random() * wuerfelgr);
+          }
+          alert(ausgabe);
+      }
+    </script>
+  </head>
+  <body>
+    <form name="groesse" id="groesse" method="POST">
+      <select id="wuerfelgr">
+        <option value="6">6</option>
+        <option value="12">12</option>
+        <option value="18">18</option>
+        <option value="32">32</option>
+      </select>
+      <br>
+      <input type="submit" onclick="wuerfel();">
+      <br>
+    </form>
+  </body>
+</html>

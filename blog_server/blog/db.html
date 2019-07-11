@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Testseite</title>
+    <link href="./style.css" type="text/css" rel="stylesheet"
+  </head>
+  <body>
+    <nav>
+      <ul class="head">
+        <a><li>blog</li></a>
+        <a href="post_uebersicht.html"><li>posts</li></a>
+        <a><li>qualität</li></a>
+        <a><li>lieferservice</li></a>
+        <a><li>kontakt</li></a>
+      </ul>
+    </nav>
+    <div class="lpipe">
+    </div>
+    <div class="body" id="body1">
+      <div class="bg">
+        <form name="blogentry" id="blogentry" action="blub.html">
+          <label for="title">Titel:</label>
+          <br>
+          <input type="text" name="title" id="title" placeholder="title"></input>
+          <br>
+          <label for="text">Text:</label>
+          <br>
+          <textarea name="text" id="text" cols="80" rows="15"></textarea>
+          <br>
+          <!-- <input type="submit" value="Post"></input> -->
+          <button id="btn01" type="button" onclick="sendPost()">Senden</button>
+          <a href="post_uebersicht.html">Post Archiv</a>
+        </form>
+      </div>
+<script>
+  function sendPost() {
+
+    console.log("sendPost() function is running");
+
+    const blogpostTitle = document.forms["blogentry"]["title"].value;
+    const blogpostText = document.forms["blogentry"]["text"].value;
+
+    if(blogpostTitle.length >= 5  && blogpostText.length >= 100){
+
+      let payload = {
+        title: document.forms["blogentry"]["title"].value,
+        text: document.forms["blogentry"]["text"].value
+      };
+
+      fetch("http://localhost:3003/blogpost_create", {
+          method: 'POST',
+          body: JSON.stringify(payload),
+          headers: {
+              'Content-Type': 'application/json',
+          },
+        })
+
+        .then(response =>
+          console.log('Blogpost erfolgreich erstellt!'));
+
+          document.getElementById("text").disabled = true;
+    }
+
+  else if(blogpostTitle.length < 5){
+    alert("Dein Titel ist zu kurz!");
+    console.log("Titel zu kurz!")
+  }
+  else if(blogpostText.length < 100){
+    alert("Text zu kurz!");
+  }
+}
+</script>
+  </body>
+</html>

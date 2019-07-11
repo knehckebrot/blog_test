@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+nav {
+  background-color: #51d0de;
+  color: #bf4aa8;
+  text-align: center;
+}
+.header li {
+  display: inline-flex;
+  text-align: center;
+  width: 25%;
+  align-content: space-between;
+  font-family: Helvetica;
+  font-size: 22px;
+
+}
+.dw {
+  width: 40%;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+.title1 {
+  text-align: center;
+  font-size: 32px;
+  font-family: Helvetica;
+
+}
+.body {
+  width: 60%;
+  max-width: 600px;
+  margin: 0 auto;
+}
